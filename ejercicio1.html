@@ -1,0 +1,84 @@
+<!--> Agregué estilos al proyecto para hacerlo visualmente más llamativo -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #2c3e50, #3498db);
+            color: #fff;
+            text-align: left;
+            animation: fadeInBody 2s ease-in;
+        }   
+
+        .contenedor {   
+            background-color: rgba(255, 255, 255, 0.145);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 60px 50px;
+            width: 50%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 30px 50px;
+            animation: slideIn 1s ease-out;
+        } 
+
+        p{
+            background: #fff;
+            color: #000;
+            border-radius: 10px;
+            border: #000 solid 1px;
+            width: 45%;
+            height: 25px;
+            padding: 5px 10px;
+        }
+
+        button {
+            background-color: #086aab72;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #297fb984;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        button:active {
+            transform: translateY(1px);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 1</h1>
+    <div class="contenedor">
+        <label>Presiona le boton y mira la magia:</label>
+        <p id="texto"></p>
+        <button onclick="actualizar()">👉 ¡Pícale aquí! 👈</button>
+    </div>
+
+    <script>
+        function actualizar() {
+            document.getElementById("texto").innerHTML = "¡Texto actualizado con Javascript!";
+        }        
+    </script>
+</body>
+</html>
